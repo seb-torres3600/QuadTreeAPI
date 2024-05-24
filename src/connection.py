@@ -38,7 +38,7 @@ def read_all_items_from_table(connection, table_name):
     except (Exception, psycopg2.Error) as error:
         logging.error("Error while reading data from PostgreSQL:", error)
 
-# Function to read all items from a table
+# Function to read all shape items from a table given constraints
 def read_items_from_table(connection, table_name, constraints):
     try:
         rectangle_rows = get_rectangle_zones(connection, table_name, constraints)
